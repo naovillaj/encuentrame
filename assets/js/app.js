@@ -3,9 +3,9 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 18,
     center: laboratoriaLima,
-    mapTypeControl:false,
-    zoomControl: false,
-    streetViewControl:false
+    // mapTypeControl:false,
+    // zoomControl: false,
+    // streetViewControl:false
   });
   var markadorLaboratoria = new google.maps.Marker({
     position: laboratoriaLima,
@@ -32,7 +32,7 @@ function initMap() {
   }
 
   function buscar(e){
-    e.preventDefault();
+    // e.preventDefault();
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
     }
@@ -61,11 +61,15 @@ function initMap() {
         if(costo<4){
           tarifa.innerHTML = "S/.4";
           
-        }
-        tarifa.innerHTML = "S/. " + parseInt(costo);
+        }else{
+          tarifa.innerHTML = "S/. " + parseInt(costo);
+        }        
         console.log(response.routes[0].legs[0].distance.text);
         directionsDisplay.setDirections(response);
-        miUbicacion.setMap(null);
+        if(miUbicacion != null){
+          miUbicacion.setMap(null);
+        }
+        
       } else {
         window.alert("No encontramos esa ruta.");
       }
@@ -75,7 +79,7 @@ function initMap() {
   directionsDisplay.setMap(map);
 
   var trazarRuta = function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
 

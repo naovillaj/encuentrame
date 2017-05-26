@@ -1,6 +1,6 @@
 #map {
     width: 100%;
-    height: 90vh;   
+    height: 95vh;   
 }    
 
 .navbar-form{
@@ -30,7 +30,7 @@ button{
 	margin: 10px;
 }    
 
-footer{
+/*footer{
 	background-color: #FCB425;
 	color: white;
 	text-align: center;
@@ -40,15 +40,16 @@ footer{
 	width: 100%;
 
 }
-
+*/
 #map{
-	/*position: relative;*/
-	display: flex;
-}
+	
+	}
 
-#tarifa{
+#tarifa{	
 	z-index: 1;
-	/*position: absolute;*/
+	position: absolute;
+	left: 0;
+	bottom: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -56,13 +57,13 @@ footer{
 	height: 200px;
 	color: #f7b617;
 	background-color: grey;
+	font-size: 20px;
 }
 
 .center-flex{
-	display: flex;
-	align-items: center;
+	background-color: #f7b617;
 }
-.form-group{
+.navbar-form{
 	width: 100%;
 }
 
