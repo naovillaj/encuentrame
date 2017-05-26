@@ -3,18 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Encuéntrame</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-	<h3>Encuéntrame</h3>
+
+	<h3>Encuéntrame</h3>	
+	<form class="navbar-form navbar-center" role="search">
+	  <div class="form-group">
+			<div class="container-fluid">
+				<div id="tarifa" class="hide"></div>
+				<div class="row text-center center-flex">
+					<div class="col-md-4 col-xs-12">
+						<label for="partida" class="glyphicon glyphicon-record"></label>			  	
+				  		<input id="partida" type="text" class="form-control" placeholder="Ingresa tu punto de partida">
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<label for="destino" class="glyphicon glyphicon-send"></label>
+				    	<input id="destino" type="text" class="form-control" placeholder="Ingresa tu destino">
+					</div>
+					<div class="col-md-2 col-xs-12">
+				  		<button id="trazar-ruta" class="btn btn-default">Trazar ruta</button>	
+				  	</div>						  	
+				  	<div class="col-md-2 col-xs-12">
+				  		<button id="encuentrame" class="btn btn-default">Encuéntrame</button>	
+				  	</div>
+			  	</div>			  		
+			</div>
+		</div>
+	</form>
     <div id="map"></div>
-	<button id="encuentrame">Encuéntrame</button>
-	<footer>Laboratoria</footer>
+
+	<!-- <footer>Laboratoria</footer> -->
 	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCggHFUL-v6lMEWpykkEEmqaDwqzcS3ASs&callback=initMap">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNLYSqQ6Erf7Vju9QFwifDQPvSdWBO-JY&callback=initMap&libraries=places">
 	</script>
-    <!-- AIzaSyCggHFUL-v6lMEWpykkEEmqaDwqzcS3ASs -->
-   
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js" charset="utf-8"></script>
 	<script src="assets/js/app.js"></script>
 </body>
 </html>

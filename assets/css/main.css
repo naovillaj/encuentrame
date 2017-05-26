@@ -3,6 +3,26 @@
     height: 90vh;   
 }    
 
+.navbar-form{
+	background-color: #f7b617;
+}
+
+.glyphicon{
+	color: white;
+}
+
+input{
+	background-color: transparent !important;
+	border: 2px solid white;
+	width: 80%;
+	color: white;
+}
+
+.form-control::-webkit-input-placeholder { color: white; }
+.form-control:-moz-placeholder { color: white; }
+.form-control::-moz-placeholder { color: white; }
+.form-control:-ms-input-placeholder { color: white; }
+
 button{
 	padding: 4px;
 	border-radius: 5px;
@@ -19,4 +39,37 @@ footer{
 	padding: 4px;
 	width: 100%;
 
+}
+
+#map{
+	/*position: relative;*/
+	display: flex;
+}
+
+#tarifa{
+	z-index: 1;
+	/*position: absolute;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	color: #f7b617;
+	background-color: grey;
+}
+
+.center-flex{
+	display: flex;
+	align-items: center;
+}
+.form-group{
+	width: 100%;
+}
+
+.form-control{
+	color: white;
+}
+.form-control:focus{
+	border-color: white;
+	box-shadow: none;
 }
